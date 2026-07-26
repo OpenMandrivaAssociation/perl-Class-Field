@@ -1,15 +1,13 @@
 %define upstream_name    Class-Field
-%define upstream_version 0.24
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.24
+Release:	2
 
 Summary:	Class Field Accessor Generator
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/ingydotnet/class-field-pm
-Source0:	https://cpan.metacpan.org/authors/id/I/IN/INGY/Class-Field-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/I/IN/INGY/Class-Field-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ Class::Field generates custom code for each accessor that is optimized for
 speed.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
